@@ -4,7 +4,7 @@ Devise.setup do |config|
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
-  # config.secret_key = '0cd851939752dc1d7f86eae110f32ab128f5ea180743c8e7c0a16428efa833b52cc5eda536a4847159e231abee2eb56dfc9d28478655eb78a106908cdce01443'
+  # config.secret_key = '8e9eca62f0103c9a8b9f97481fc18723b02e5a3b2f50bd55408d7e51916d6c6d3ce928025c37b46544af0d90bde17e2990075cbc413e4fa32635cd95f7c923c0'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -97,7 +97,8 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = '78960d1f464dbacf3041a6a7a164c90c9fa12a13aa5aa5ea596e796500488e9f25acb4788190219e6fb6428ce5da22609dab87fd0f5b3b5b6f69e057729014e9'
+
+  # config.pepper = '5b43285d5c8fa7439a769384da6a6e0ae40f3b6a485ae4ced25b4249af1f960b3bcca25ccde67fb960bc7342af83f75d35d72de075be04479a86165518bdc42e'
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -205,7 +206,8 @@ Devise.setup do |config|
   # Turn scoped views on. Before rendering "sessions/new", it will first check for
   # "users/sessions/new". It's turned off by default because it's slower if you
   # are using only default views.
-  # config.scoped_views = false
+
+  config.scoped_views = true
 
   # Configure the default scope given to Warden. By default it's the first
   # devise role declared in your routes (usually :user).
