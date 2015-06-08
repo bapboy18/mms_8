@@ -1,0 +1,10 @@
+<h1><%= t("user.profile") %></h1>
+  <div>      
+    <h2>Email: <%= @user.email %></h2>
+  </div>
+  <div class="box-content">
+    <ul class="account_list">
+      <li><%= link_to t("user.list-team"), "#" %></li>
+      <li><%= link_to t("user.list-skill"), "#" %></li>
+    </ul>
+  </div>

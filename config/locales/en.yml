@@ -20,4 +20,15 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  flash:
+    delete: "Deleted user!" 
+    added: "User has been added!" 
+    update: "User's profile has been updated!"
+  user:
+    profile: "User Profile"
+    list-team: "Show list teams"
+    list-skill: "Show list skills"
+    show: "Show"
+    edit: "Edit"
+    delete: "Delete"
+    confirm: "Are you sure?"
