@@ -1,0 +1,7 @@
+roles:
+  - "admin"
+  - "normal"
+paginate:
+  small: 10
+  normal: 20
+  large: 30
