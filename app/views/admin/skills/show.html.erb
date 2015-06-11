@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= t "skill.name" %></strong>
+  <%= @skill.name %>
+</p>
+
+<p>
+  <strong><%= t "skill.description" %></strong>
+  <%= @skill.description %>
+</p>
+
+<%= link_to t("user.edit"), edit_admin_skill_path(@skill) %> |
+<%= link_to t("user.back"), admin_skills_path %>

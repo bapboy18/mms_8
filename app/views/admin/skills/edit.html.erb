@@ -1,0 +1,6 @@
+<h1><%= t "skill.editing_skill" %></h1>
+
+<%= render "form" %>
+
+<%= link_to t("user.show"), [:admin, @skill] %> |
+<%= link_to t("user.back"), admin_skills_path %>
