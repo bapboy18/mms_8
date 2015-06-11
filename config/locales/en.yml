@@ -28,6 +28,7 @@ en:
     profile: "User Profile"
     list-team: "Show list teams"
     list-skill: "Show list skills"
+    back: "Back"
     show: "Show"
     edit: "Edit"
     delete: "Delete"
@@ -59,3 +60,15 @@ devise:
   sessions:
     user:
       signed_in: "Logged in successfully!"
+    confirm: "Are you sure?????"
+  team:
+    create: "Team was successfully created."
+    update: "Team was successfully updated."
+    delete: "Team was successfully destroyed."
+    new_team: "Create New Team"
+    all_team: "All Team"
+    editing_team: "Editing Team"
+    listing_team: "Listing Teams"
+    name: "Name"
+    description: "Description"
+    leader: "Leader"

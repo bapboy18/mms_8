@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= t "team.listing_team" %></h1>
+<div id="teams-list">     
+  <%= render partial: "team", collection: @teams %>
+  <%= will_paginate %>
+</div>
+
+<%= link_to t("team.new_team"), new_admin_team_path %>
