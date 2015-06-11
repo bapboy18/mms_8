@@ -1,0 +1,6 @@
+<h1><%= t "team.editing_team" %></h1>
+
+<%= render "form" %>
+
+<%= link_to t("user.show"), [:admin, @team] %> |
+<%= link_to t("user.back"), admin_teams_path %>

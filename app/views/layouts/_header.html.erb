@@ -6,6 +6,7 @@
         <% if user_signed_in? %>
           <li style="color:red"><%= t("layouts.signed_in ") %><strong><%= current_user.email %></strong></li>
           <li><%= link_to_if current_user.is_admin?, t("layouts.all_user"), admin_users_path %></li>
+          <li><%= link_to_if current_user.is_admin?, t("team.all_team"), admin_teams_path %></li>
           <li><%= link_to t("layouts.edit_profile"), edit_user_registration_path %></li> |
           <li><%= link_to t("layouts.logout"), destroy_user_session_path, method: :delete %></li>
         <% else %>
