@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= t "skill.listing_skill" %></h1>
+<div id="skills-list">     
+  <%= render partial: "skill", collection: @skills %>
+  <%= will_paginate %>
+</div>
+
+<%= link_to t("skill.new_skill"), new_admin_skill_path %>
