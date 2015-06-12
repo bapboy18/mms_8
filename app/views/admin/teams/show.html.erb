@@ -17,3 +17,16 @@
 
 <%= link_to t("user.edit"), edit_admin_team_path(@team) %> |
 <%= link_to t("user.back"), admin_teams_path %>
+
+<h1><%= t "team.list_member" %></h1>
+<table>
+  <tr><th><%= t "team.user_name" %></th></tr>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.email %></td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to t("team.add_member"), admin_team_members_path(@team),
+  class: "btn btn-primary" %>
+<br><br>
