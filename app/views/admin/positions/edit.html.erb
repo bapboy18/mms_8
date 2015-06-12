@@ -1,0 +1,6 @@
+<h1><%= t "position.editing_position" %></h1>
+
+<%= render "form" %>
+
+<%= link_to t("user.show"), [:admin, @position] %> |
+<%= link_to t("user.back"), admin_positions_path %>

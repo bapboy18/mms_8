@@ -11,14 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150612015135) do
-
-  create_table "projects", force: :cascade do |t|
-    t.integer  "team_id",     limit: 4
-    t.string   "name",        limit: 255
-    t.text     "description", limit: 65535
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+ActiveRecord::Schema.define(version: 20150612070524) do
 
   create_table "positions", force: :cascade do |t|
     t.string   "name",         limit: 255
@@ -27,19 +20,19 @@ ActiveRecord::Schema.define(version: 20150612015135) do
     t.datetime "updated_at",               null: false
   end
 
+  create_table "projects", force: :cascade do |t|
+    t.integer  "team_id",     limit: 4
+    t.string   "name",        limit: 255
+    t.text     "description", limit: 65535
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
   create_table "skills", force: :cascade do |t|
     t.string   "name",        limit: 255
     t.string   "description", limit: 255
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
-  end
-
-  create_table "team_users", force: :cascade do |t|
-    t.integer  "user_id",     limit: 4
-    t.integer  "team_id",     limit: 4
-    t.datetime "joined_date"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
   end
 
   create_table "teams", force: :cascade do |t|

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= t "position.name" %></strong>
+  <%= @position.name %>
+</p>
+
+<p>
+  <strong><%= t "position.abbreviation" %></strong>
+  <%= @position.abbreviation %>
+</p>
+
+<%= link_to t("user.edit"), edit_admin_position_path(@position) %> |
+<%= link_to t("user.back"), admin_positions_path %>
