@@ -10,5 +10,6 @@ Rails.application.routes.draw do
     resources :teams
     resources :skills
     resources :projects
+    resources :positions
   end
 end
