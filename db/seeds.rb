@@ -3,3 +3,4 @@
 end
 
 FactoryGirl.create :team
+FactoryGirl.create :project
