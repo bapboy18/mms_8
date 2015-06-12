@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+<h1><%= t "project.listing_project" %></h1>
+<div id="projects-list">
+  <table>
+    <thead class="t-header">
+      <tr>
+        <th class="th1"><%= t "project.team_id" %></th>
+        <th class="th2"><%= t "project.name" %></th>
+        <th class="th3"><%= t "project.description" %></th>
+        <th colspan="3" class="th-colspan"></th>
+      </tr>
+    </thead>
+    <tbody class="t-body">
+      <%= render partial: "project", collection: @projects %>    
+    </tbody>
+  </table>  
+  <%= will_paginate %>
+</div>
+
+<%= link_to t("project.new_project"), new_admin_project_path %>
