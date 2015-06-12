@@ -67,6 +67,16 @@ en:
     name: "Name"
     description: "Description"
     leader: "Leader"
+  project:
+    create: "Project was successfully created!"
+    update: "Project was successfully updated!"
+    delete: "Project was successfully deleted!"
+    new_project: "Create a New project"
+    all_project: "All Project"
+    editing_project: "Editing Project"
+    listing_project:
+    name: "Name"
+    description: "Description"
 devise:
   sessions:
     user:

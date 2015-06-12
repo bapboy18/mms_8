@@ -8,6 +8,7 @@
           <li><%= link_to_if current_user.is_admin?, t("layouts.all_user"), admin_users_path %></li>
           <li><%= link_to_if current_user.is_admin?, t("team.all_team"), admin_teams_path %></li>
           <li><%= link_to_if current_user.is_admin?, t("skill.all_skill"), admin_skills_path %></li>
+          <li><%= link_to_if current_user.is_admin?, t("project.all_project"), admin_projects_path %></li>
           <li><%= link_to t("layouts.edit_profile"), edit_user_registration_path %></li> |
           <li><%= link_to t("layouts.logout"), destroy_user_session_path, method: :delete %></li>
         <% else %>
