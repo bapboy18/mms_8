@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong><%= t "project.team_id: " %></strong>
+  <%= @project.team_id %>
+</p>
+<p>
+  <strong><%= t "project.name: " %></strong>
+  <%= @project.name %>
+</p>
+<p>
+  <strong><%= t "project.description: " %></strong>
+  <%= @project.description %>
+</p>
+
+<%= link_to t("user.edit"), edit_admin_project_path(@project) %> |
+<%= link_to t("user.back"), admin_projects_path %>
