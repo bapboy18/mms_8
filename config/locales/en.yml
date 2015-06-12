@@ -77,6 +77,16 @@ en:
     listing_project:
     name: "Name"
     description: "Description"
+  position:
+    create: "position was successfully created."
+    update: "position was successfully updated."
+    delete: "position was successfully deleted."
+    new_position: "Create New position"
+    all_position: "All position"
+    editing_position: "Editing position"
+    listing_position: "Listing positions"
+    name: "Name"
+    abb: "Abbreviation"
 devise:
   sessions:
     user:
