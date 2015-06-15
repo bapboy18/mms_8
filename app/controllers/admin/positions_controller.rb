@@ -1,5 +1,5 @@
 class Admin::PositionsController < ApplicationController
-  before_action :set_position
+  before_action :set_position, except: [:index, :new, :create]
 
   def index
     @positions = Position.all.paginate page: params[:page], per_page: Settings.paginate.normal
@@ -37,7 +37,7 @@ class Admin::PositionsController < ApplicationController
   end
 
   def destroy
-    @position.destroy
+    @position.delete
     respond_to do |format|
       format.html {redirect_to admin_positions_url, notice: t("position.delete")}
       format.json {head :no_content}
@@ -50,6 +50,6 @@ class Admin::PositionsController < ApplicationController
   end
 
   def position_params
-    params.require(:position).permit :name, :description
+    params.require(:position).permit :name, :abbreviation
   end
 end

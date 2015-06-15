@@ -1,0 +1,8 @@
+<p id="notice"><%= notice %></p>
+<h1><%= t "position.listing_position" %></h1>
+<div id="positions-list">     
+  <%= render partial: "position", collection: @positions %>
+  <%= will_paginate %>
+</div>
+
+<%= link_to t("position.new_position"), new_admin_position_path %>
