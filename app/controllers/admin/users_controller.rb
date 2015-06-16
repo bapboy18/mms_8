@@ -10,6 +10,7 @@ class Admin::UsersController < ApplicationController
     @user = User.find params[:id]
     @positions = @user.positions
     @teams = @user.teams
+    @skills = @user.skills
   end
 
   def new

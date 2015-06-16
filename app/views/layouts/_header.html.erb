@@ -10,10 +10,11 @@
           <li><%= link_to_if current_user.is_admin?, t("skill.all_skill"), admin_skills_path %></li>
           <li><%= link_to_if current_user.is_admin?, t("project.all_project"), admin_projects_path %></li>
           <li><%= link_to_if current_user.is_admin?, t("position.all_position"), admin_positions_path %></li>
+          <li><%= link_to t("layouts.show_profile"), current_user %></li> |
           <li><%= link_to t("layouts.edit_profile"), edit_user_registration_path %></li> |
           <li><%= link_to t("layouts.logout"), destroy_user_session_path, method: :delete %></li>
-          <li><%= link_to t("team.all_team"), teams_path %></li>
         <% else %>
+          <li><%= link_to t("team.all_team"), teams_path %></li>
           <li><%= link_to t("layouts.signup"), new_user_registration_path %></li> |
           <li><%= link_to t("layouts.login"), new_user_session_path %></li>
         <% end %>

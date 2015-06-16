@@ -7,7 +7,8 @@ class Ability
       can :manage, :all
     else
       can :read, :all
-      can :update, User, active: true, user_id: user.id
+      can :update, User, id: user.id
+      can :create, SkillUser
     end
   end
 end

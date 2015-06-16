@@ -1,0 +1,10 @@
+<div>
+  <%= t "user.email" %>
+  <%= @user.email %>
+  <br>
+  <%= t "user.skill" %>
+  <% @user.skills.each do |skill| %>
+    <li><%= skill.name %></li>
+  <% end %>
+</div>
+<%= link_to t("skill.add"), user_skills_path(@user), class:"btn btn-success btn-sm" %>
