@@ -7,6 +7,7 @@ class Admin::UsersController < ApplicationController
 
   def show
     @user = User.find params[:id]
+    @positions = @user.positions
   end
 
   def new
@@ -47,6 +48,6 @@ class Admin::UsersController < ApplicationController
   private
   def user_params
     params.require(:user).permit :email, :password,
-                                 :password_confirmation, :role
+      :password_confirmation, :role, position_ids: []
   end
 end

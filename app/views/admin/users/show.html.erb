@@ -2,6 +2,14 @@
   <div>      
     <h2>Email: <%= @user.email %></h2>
   </div>
+  <div>      
+    <h2>
+      Position: <% @positions.each do |n| %>
+        <%= n.name %>
+      <% end %>
+    </h2>
+  </div>
+  <%= link_to t("user.add_position"), admin_user_position_users_path(@user), class: "btn btn-primary" %>
   <div class="box-content">
     <ul class="account_list">
       <li><%= link_to t("user.list-team"), "#" %></li>

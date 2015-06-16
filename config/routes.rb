@@ -6,7 +6,10 @@ Rails.application.routes.draw do
 
   namespace :admin do    
     root "users#index"
-    resources :users
+    resources :users do
+      resource :position_users, only: :show
+      get "positions" => "position_users#show"
+    end
     resources :teams
     resources :skills
     resources :projects

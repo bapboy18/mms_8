@@ -1,0 +1,17 @@
+<%= form_for [:admin, @user] do |f| %>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <table class="table">
+        <%= f.collection_check_boxes :position_ids, Position.all, :id, :name do |b| %>
+          <tr>
+          <%= b.label do %>
+            <th><%= b.text %></th>
+            <th class="selection_checkbox"><%= b.check_box %></th>
+          <% end %>
+          </tr>
+        <% end %>
+      </table>
+      <%= f.submit t("layouts.update"), class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

@@ -6,6 +6,8 @@ class Admin::PositionsController < ApplicationController
   end
 
   def show
+    @position = Position.find params[:id]
+    @users = @position.users
   end
 
   def new
