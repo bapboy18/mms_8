@@ -6,6 +6,8 @@ class Admin::TeamsController < ApplicationController
   end
 
   def show
+    @team = Team.find params[:id]
+    @users = @team.users
   end
 
   def new
@@ -51,6 +53,6 @@ class Admin::TeamsController < ApplicationController
   end
 
   def team_params
-    params.require(:team).permit :name, :description, :leader
+    params.require(:team).permit :name, :description, :leader, user_ids: []
   end
 end

@@ -275,22 +275,20 @@ aside {
   }
 }
 
-.t-header{
+.t-header {
   background-color: red
 }
 
-.th1{
-  width: 200px;
+.list-user {
+  background-color: #9D9D9D;
+  border: 1px solid #bbb;
+  width: 310px;
+  float: right;
 }
 
-.th2{
-  width: 500px;
-}
-
-.th3{
-  width: 200px;
-}
-
-.th-colspan{
-  width: 270px;
+.list-user-assigned {
+  background-color: #9D9D9D;
+  border: 1px solid #bbb;
+  width: 800px;
+  float: left;
 }

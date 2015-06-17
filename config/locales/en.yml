@@ -88,6 +88,25 @@ en:
     listing_position: "Listing positions"
     name: "Name"
     abb: "Abbreviation"
+  team:
+    create: "Team was successfully created."
+    update: "Team was successfully updated."
+    delete: "Team was successfully destroyed."
+    new_team: "Create New Team"
+    all_team: "All Team"
+    editing_team: "Editing Team"
+    listing_team: "Listing Teams"
+    name: "Name"
+    description: "Description"
+    leader: "Leader"
+    add_member: "Add member to Team"
+    view_detail: "View Team details"
+    back_to_team_manager: "Back to Team manager"
+    list_member: "List members"
+    list_member_assigned: "Member in this Team"
+    user_name: "User Name"
+    save: "Save"
+    has: "This team has"
 devise:
   sessions:
     user:
@@ -104,4 +123,9 @@ devise:
     name: "Name"
     description: "Description"
     leader: "Leader"
-  
+    add_member: "Add member to Team"
+    view_detail: "View Team details"
+    back_to_team_manager: "Back to Team manager"
+    list_member: "List members is attend this Team"
+    user_name: "User Name"
+    save: "Save"
