@@ -1,4 +1,14 @@
-<div id="users-list">
-  <%= render partial: "user", collection: @users %>
-  <%= will_paginate %>
-</div>
+<h1><%= t "user.all_user" %></h1>
+<%= search_form_for @search, url: admin_users_path do |f| %>
+  <fieldset>
+    <ul>
+      <li>
+        <%= f.label :email_cont %>
+        <%= f.text_field :email_cont %>
+      </li>
+    </ul>
+  </fieldset>
+  <%= f.submit %>
+<% end %>
+
+<%= render "result" %>
