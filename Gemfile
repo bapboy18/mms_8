@@ -18,6 +18,10 @@ gem "sdoc", "~> 0.4.0", group: :doc
 gem "rails_config"
 gem "cancancan", "~> 1.10"
 gem "ransack"
+gem "sidekiq"
+gem "sinatra", require: false
+gem "slim"
+gem "redis-rails"
 
 group :development, :test do
   gem "rspec-rails"
