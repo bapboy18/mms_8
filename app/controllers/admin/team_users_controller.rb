@@ -3,8 +3,17 @@ class Admin::TeamUsersController < ApplicationController
 
   def show
     @team_user = @team.team_users.new
-    @users = User.all
-    @user = @team.team_users
+    @users = User.not_in_team
+    @this_team_users = @team.users
+  end
+
+  def create
+    @team_user = TeamUser.new team_user_params
+    if @team_user.save
+      respond_to do |format|
+        format.js
+      end
+    end
   end
 
   private
@@ -14,5 +23,9 @@ class Admin::TeamUsersController < ApplicationController
 
   def team_user_params
     params.require(:team_user).permit :user_id, :team_id, :joined_date
+  end
+
+  def user_params
+    params.require(:team_user).permit :team_id, user_ids: []
   end
 end
