@@ -21,10 +21,11 @@
 
 en:
   flash:
-    delete: "Deleted user!" 
-    added: "User has been added!" 
+    delete: "Deleted user!"
+    added: "User has been added!"
     update: "User's profile has been updated!"
   user:
+    all_user: "All User"
     profile: "User Profile"
     list-team: "Show list teams"
     list-skill: "Show list skills"
@@ -129,3 +130,10 @@ devise:
     list_member: "List members is attend this Team"
     user_name: "User Name"
     save: "Save"
+    add_user: "Add User"
+    team_details: "Team Details"
+    member: "Member"
+    add_member: "Add member"
+    view: "view"
+    remove: "Remove"
+    removed: "User was removed"

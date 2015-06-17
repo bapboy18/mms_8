@@ -8,6 +8,7 @@ class Admin::UsersController < ApplicationController
   def show
     @user = User.find params[:id]
     @positions = @user.positions
+    @teams = @user.teams
   end
 
   def new

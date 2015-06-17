@@ -1,32 +1,23 @@
 <p id="notice"><%= notice %></p>
-
+<br><br><h1><%= t "team.details" %></h1>
 <p>
   <strong><%= t "team.name" %></strong>
   <%= @team.name %>
 </p>
-
 <p>
   <strong><%= t "team.description" %></strong>
   <%= @team.description %>
 </p>
-
 <p>
   <strong><%= t "team.leader" %></strong>
   <%= @team.leader %>
 </p>
+<p>
+  <strong><%= t "team.member" %></strong><br/>
+    <%= render partial: "user", collection: @users %>
+</p>
 
+<%= link_to t("user.add_member"), admin_team_team_users_path(@team),
+  class: "btn btn-primary" %><br/><br/>
 <%= link_to t("user.edit"), edit_admin_team_path(@team) %> |
 <%= link_to t("user.back"), admin_teams_path %>
-
-<h1><%= t "team.list_member" %></h1>
-<table>
-  <tr><th><%= t "team.user_name" %></th></tr>
-  <% @users.each do |user| %>
-    <tr>
-      <td><%= user.email %></td>
-    </tr>
-  <% end %>
-</table>
-<%= link_to t("team.add_member"), admin_team_members_path(@team),
-  class: "btn btn-primary" %>
-<br><br>
