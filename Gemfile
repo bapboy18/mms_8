@@ -17,6 +17,7 @@ gem "jbuilder", "~> 2.0"
 gem "sdoc", "~> 0.4.0", group: :doc
 gem "rails_config"
 gem "cancancan", "~> 1.10"
+gem "ransack"
 
 group :development, :test do
   gem "rspec-rails"
