@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     resources :projects
     resources :positions
   end
+  resources :teams
 
   mount Sidekiq::Web, at: "/sidekiq"
 end

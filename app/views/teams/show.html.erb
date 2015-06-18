@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+<br><br><h1><%= t "team.details" %></h1>
+<p>
+  <strong><%= t "team.name" %></strong>
+  <%= @team.name %>
+</p>
+<p>
+  <strong><%= t "team.description" %></strong>
+  <%= @team.description %>
+</p>
+<p>
+  <strong><%= t "team.leader" %></strong>
+  <%= @team.leader %>
+</p>
+<p>
+  <strong><%= t "team.member" %></strong><br/>
+    <%= render partial: "user", collection: @users %>
+</p>
+
+<%= link_to t("user.back"), teams_path %>
