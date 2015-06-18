@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  require "sidekiq/web"
   devise_for :users
   root "static_pages#home"
   get "static_pages/help"
@@ -19,4 +20,6 @@ Rails.application.routes.draw do
     resources :projects
     resources :positions
   end
+
+  mount Sidekiq::Web, at: "/sidekiq"
 end
