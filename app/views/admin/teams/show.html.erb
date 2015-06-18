@@ -1,23 +1,40 @@
-<p id="notice"><%= notice %></p>
-<br><br><h1><%= t "team.details" %></h1>
-<p>
-  <strong><%= t "team.name" %></strong>
-  <%= @team.name %>
-</p>
-<p>
-  <strong><%= t "team.description" %></strong>
-  <%= @team.description %>
-</p>
-<p>
-  <strong><%= t "team.leader" %></strong>
-  <%= @team.leader %>
-</p>
-<p>
-  <strong><%= t "team.member" %></strong><br/>
+<aside class= "col-md-6">
+  <p id="notice"><%= notice %></p>
+  <br><br><h1><%= t "team.details" %></h1>
+  <p>
+    <strong><%= t "team.name" %></strong>
+    <%= @team.name %>
+  </p>
+  <p>
+    <strong><%= t "team.description" %></strong>
+    <%= @team.description %>
+  </p>
+  <p>
+    <strong><%= t "team.leader" %></strong>
+    <%= @team.leader %>
+  </p>
+  <p>
+    <strong><%= t "team.member" %></strong><br/>
     <%= render partial: "user", collection: @users %>
-</p>
-
-<%= link_to t("user.add_member"), admin_team_team_users_path(@team),
-  class: "btn btn-primary" %><br/><br/>
-<%= link_to t("user.edit"), edit_admin_team_path(@team) %> |
-<%= link_to t("user.back"), admin_teams_path %>
+  </p>
+  <%= link_to t("user.add_member"), admin_team_team_users_path(@team),
+    class: "btn btn-primary" %><br/><br/>
+  <%= link_to t("user.edit"), edit_admin_team_path(@team) %> |
+  <%= link_to t("user.back"), admin_teams_path %>
+</aside>
+<aside class= "col-md-6">
+  <br/><br/><h1><%= t "team.list_project" %></h1>
+  <table>
+    <thead class="t-header">
+      <tr>
+        <th class="th1"><%= t "project.name" %></th>
+        <th class="th2"><%= t "project.start_date" %></th>
+        <th class="th3"><%= t "project.end_date" %></th>
+        <th colspan="3" class="th-colspan"></th>
+      </tr>
+    </thead>
+    <tbody class="t-body">
+      <%= render partial: "project", collection: @projects %>
+    </tbody>
+  </table>
+</aside>

@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(version: 20150616093754) do
     t.integer  "team_id",     limit: 4
     t.string   "name",        limit: 255
     t.text     "description", limit: 65535
+    t.datetime "start_date"
+    t.datetime "end_date"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
   end

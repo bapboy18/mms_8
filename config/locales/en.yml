@@ -85,6 +85,8 @@ en:
     team_id: "Team ID"
     name: "Name"
     description: "Description"
+    start_date: "Start date"
+    end_date: "End date"
   position:
     create: "position was successfully created."
     update: "position was successfully updated."
@@ -114,6 +116,9 @@ en:
     user_name: "User Name"
     save: "Save"
     has: "This team has"
+    list_project: "List Project"
+    start_date: "Start Date"
+    end_date: "End date"
 devise:
   sessions:
     user:

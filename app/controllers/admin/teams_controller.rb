@@ -13,6 +13,7 @@ class Admin::TeamsController < ApplicationController
   def show
     @team = Team.find params[:id]
     @users = @team.users
+    @projects = @team.projects
   end
 
   def new
