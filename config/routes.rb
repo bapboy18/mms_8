@@ -5,11 +5,12 @@ Rails.application.routes.draw do
   get "static_pages/about"
 
   namespace :admin do
-    root "users#index"
+    root to: "users#index"
     get "team_users/new"
     resources :users do
       resource :position_users, only: :show
       get "positions" => "position_users#show"
+      collection {post :import}
     end
     resources :teams do
       resource :team_users, only: :show

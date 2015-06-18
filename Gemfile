@@ -22,6 +22,7 @@ gem "sidekiq"
 gem "sinatra", require: false
 gem "slim"
 gem "redis-rails"
+gem "smarter_csv"
 
 group :development, :test do
   gem "rspec-rails"

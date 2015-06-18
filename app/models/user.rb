@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
+  require "csv"
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
@@ -24,5 +24,17 @@ class User < ActiveRecord::Base
 
   Settings.roles.each do |v|
     define_method("is_#{v}?") {role == v}
+  end
+
+  def self.import file
+    CSV.foreach(file.path, headers: true) do |row|
+      user_hash = row.to_hash
+      user = User.where id: user_hash["id"]
+      if user.count == 1
+        user.first.update_attributes user_hash
+      else
+        User.create!(user_hash)
+      end
+    end
   end
 end

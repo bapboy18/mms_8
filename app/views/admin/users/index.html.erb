@@ -32,4 +32,12 @@
 <div id = "activity-log">
   <h3><%= t "activity.list" %></h3>
   <%= render "activity" %>
+<%= flash[:notice] %>
+
+<div>
+<h3><%= t "import.import_file" %></h3>
+  <%= form_tag import_admin_users_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Import CSV" %>
+  <% end %>
 </div>

@@ -160,3 +160,8 @@ devise:
     view: "view"
     remove: "Remove"
     removed: "User was removed"
+  import:
+    import_file: "Import a CSV File"
+    submit_tag: "Import CSV"
+    id: "ID"
+    email: "Email"

@@ -5,6 +5,7 @@ class Admin::UsersController < ApplicationController
     @search = User.search params[:q]
     @users = @search.result
     @activities = Activity.all
+    @users_csv = User.all
   end
 
   def show
@@ -39,6 +40,15 @@ class Admin::UsersController < ApplicationController
       redirect_to admin_users_url
     else
       render "edit"
+    end
+  end
+
+  def import
+    begin
+      User.import params [:file]
+      redirect_to root_url, notice: "Product imported"
+    rescue
+      redirect_to root_url, notice: "Invalid CSV file format"
     end
   end
 
