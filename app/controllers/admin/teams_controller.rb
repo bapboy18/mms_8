@@ -2,7 +2,12 @@ class Admin::TeamsController < ApplicationController
   before_action :set_team, only: [:show, :edit, :update, :destroy]
 
   def index
-    @teams = Team.all.paginate page: params[:page], per_page: Settings.paginate.normal
+    @teams = Team.all.paginate page: params[:page],
+      per_page: Settings.paginate.normal
+    respond_to do |format|
+      format.html
+      format.csv {send_data @teams.to_csv}
+    end
   end
 
   def show

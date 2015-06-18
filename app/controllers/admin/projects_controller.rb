@@ -2,7 +2,12 @@ class Admin::ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 
   def index
-    @projects = Project.all.paginate page: params[:page], per_page: Settings.paginate.normal
+    @projects = Project.all.paginate page: params[:page],
+      per_page: Settings.paginate.normal
+    respond_to do |format|
+      format.html
+      format.csv {send_data @projects.to_csv}
+    end
   end
 
   def show
