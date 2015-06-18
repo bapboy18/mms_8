@@ -1,4 +1,6 @@
 class Team < ActiveRecord::Base
+  extend Export
+
   has_many :users, through: :team_users
   has_many :team_users, dependent: :destroy
 

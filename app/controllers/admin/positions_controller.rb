@@ -2,7 +2,12 @@ class Admin::PositionsController < ApplicationController
   before_action :set_position, except: [:index, :new, :create]
 
   def index
-    @positions = Position.all.paginate page: params[:page], per_page: Settings.paginate.normal
+    @positions = Position.all.paginate page: params[:page],
+      per_page: Settings.paginate.normal
+    respond_to do |format|
+      format.html
+      format.csv {send_data @positions.to_csv}
+    end
   end
 
   def show

@@ -34,6 +34,12 @@ en:
     edit: "Edit"
     delete: "Delete"
     confirm: "Are you sure?"
+    download_team: "Download Teams:"
+    download_skill: "Download Skills:"
+    download_position: "Download Positions:"
+    download_project: "Download Projects:"
+    csv: "CSV File"
+    xls: "XLS File"
   layouts:
     welcome: "Welcome to Member Manager System  MMS_8"
     tridu: "From tridu team!"

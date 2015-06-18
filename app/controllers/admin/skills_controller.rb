@@ -2,7 +2,12 @@ class Admin::SkillsController < ApplicationController
   before_action :set_skill, only: [:show, :edit, :update, :destroy]
 
   def index
-    @skills = Skill.all.paginate page: params[:page], per_page: Settings.paginate.normal
+    @skills = Skill.all.paginate page: params[:page],
+      per_page: Settings.paginate.normal
+    respond_to do |format|
+      format.html
+      format.csv {send_data @skills.to_csv}
+    end
   end
 
   def show
@@ -37,7 +42,7 @@ class Admin::SkillsController < ApplicationController
   end
 
   def destroy
-    @skill.destroy
+    @skill.delete
     respond_to do |format|
       format.html {redirect_to admin_skills_url, notice: t("skill.delete")}
       format.json {head :no_content}
