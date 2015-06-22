@@ -1,0 +1,5 @@
+<ul><%= t "skill.user" %>
+  <% @user.skills.each do |skill| %>
+    <li><%= skill.name %></li>
+  <% end %>
+</ul>

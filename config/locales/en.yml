@@ -24,6 +24,7 @@ en:
     delete: "Deleted user!"
     added: "User has been added!"
     update: "User's profile has been updated!"
+    notupdate: "User profile can't update"
   user:
     all_user: "All User"
     profile: "User Profile"
@@ -40,6 +41,9 @@ en:
     download_project: "Download Projects:"
     csv: "CSV File"
     xls: "XLS File"
+    email: "Email:"
+    position: "Positions:"
+    skill: "Skills:"
   layouts:
     welcome: "Welcome to Member Manager System  MMS_8"
     tridu: "From tridu team!"
@@ -63,6 +67,7 @@ en:
     forgot_pass: "Forgot your password?"
     send_me_pass: "Send me reset password instructions"
     back: "Back"
+    submit: "Submit"
   skill:
     create: "skill was successfully created."
     update: "skill was successfully updated."
@@ -74,6 +79,8 @@ en:
     name: "Name"
     description: "Description"
     leader: "Leader"
+    add: "Add Skill"
+    submit: "Submit"
   project:
     create: "Project was successfully created!"
     update: "Project was successfully updated!"
@@ -87,6 +94,7 @@ en:
     description: "Description"
     start_date: "Start date"
     end_date: "End date"
+    submit: "Submit"
   position:
     create: "position was successfully created."
     update: "position was successfully updated."
@@ -119,6 +127,7 @@ en:
     list_project: "List Project"
     start_date: "Start Date"
     end_date: "End date"
+    submit: "Submit"
 devise:
   sessions:
     user:

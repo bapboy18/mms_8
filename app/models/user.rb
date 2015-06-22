@@ -15,9 +15,12 @@ class User < ActiveRecord::Base
   has_many :teams, through: :team_users
   has_many :team_users, dependent: :destroy
 
+  has_many :skills, through: :skill_users
+  has_many :skill_users, dependent: :destroy
+
   accepts_nested_attributes_for :position_users, allow_destroy: true
   accepts_nested_attributes_for :team_users, allow_destroy: true
-
+  accepts_nested_attributes_for :skill_users, allow_destroy: true
 
   Settings.roles.each do |v|
     define_method("is_#{v}?") {role == v}
