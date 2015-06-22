@@ -25,6 +25,8 @@ en:
     added: "User has been added!"
     update: "User's profile has been updated!"
     notupdate: "User profile can't update"
+  activity:
+    list: "List Activity"
   user:
     all_user: "All User"
     profile: "User Profile"
@@ -44,6 +46,7 @@ en:
     email: "Email:"
     position: "Positions:"
     skill: "Skills:"
+    not_admin: "You are not admin,login please!"
   layouts:
     welcome: "Welcome to Member Manager System  MMS_8"
     tridu: "From tridu team!"

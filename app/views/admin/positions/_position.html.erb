@@ -1,20 +1,8 @@
-<table>
-  <thead class="t-header">
-    <tr>
-      <th class="th1"><%= t "position.name" %></th>
-      <th class="th2"><%= t "position.abbreviation" %></th>
-      <th colspan="3" class="th-colspan"></th>
-    </tr>
-  </thead>
-
-  <tbody class="t-body">
-    <tr>
-      <td><%= link_to position.name, admin_position_path(position) %></td>
-      <td><%= position.abbreviation %></td>
-      <td><%= link_to t("user.show"), admin_position_path(position) %></td>
-      <td><%= link_to t("user.edit"), edit_admin_position_path(position) %></td>
-      <td><%= link_to t("user.delete"), admin_position_path(position), method: :delete,
-        data: {confirm: t("user.confirm")} %></td>
-    </tr>
-  </tbody>
-</table>
+<tr>
+  <td><%= link_to position.name, admin_position_path(position) %></td>
+  <td><%= position.abbreviation %></td>
+  <td><%= link_to t("user.show"), admin_position_path(position) %></td>
+  <td><%= link_to t("user.edit"), edit_admin_position_path(position) %></td>
+  <td><%= link_to t("user.delete"), admin_position_path(position),
+    method: :delete, data: {confirm: t("user.confirm")} %></td>
+</tr>
