@@ -5,3 +5,7 @@ paginate:
   small: 10
   normal: 20
   large: 30
+activities:
+  create: "admin_create"
+  update: "admin_update"
+  destroy: "admin_destroy"
