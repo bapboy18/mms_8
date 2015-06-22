@@ -4,6 +4,7 @@ class Admin::UsersController < ApplicationController
   def index
     @search = User.search params[:q]
     @users = @search.result
+    @activities = Activity.all
   end
 
   def show

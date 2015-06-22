@@ -1,5 +1,6 @@
 class Admin::PositionsController < ApplicationController
   before_action :set_position, except: [:index, :new, :create]
+  before_action :authenticate_user!, :admin_user
 
   def index
     @positions = Position.all.paginate page: params[:page],
