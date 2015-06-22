@@ -46,7 +46,7 @@ class Admin::TeamsController < ApplicationController
   end
 
   def destroy
-    @team.destroy
+    @team.delete
     respond_to do |format|
       format.html {redirect_to admin_teams_url, notice: t("team.delete")}
       format.json {head :no_content}

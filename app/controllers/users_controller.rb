@@ -11,7 +11,7 @@ class UsersController < ApplicationController
         format.js
       end
     else
-      flash[:success] = t("flash.notupdate")
+      flash[:success] = t "flash.notupdate"
     end
   end
 
