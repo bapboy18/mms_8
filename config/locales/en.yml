@@ -94,6 +94,7 @@ en:
     all_project: "All Project"
     editing_project: "Editing Project"
     listing_project: "Listing Project"
+    list_user: "List User"
     team_id: "Team ID"
     name: "Name"
     description: "Description"

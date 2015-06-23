@@ -11,6 +11,7 @@ class Admin::ProjectsController < ApplicationController
   end
 
   def show
+    @users = @project.users
   end
 
   def new

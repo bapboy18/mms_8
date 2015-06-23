@@ -1,24 +1,41 @@
 <p id="notice"><%= notice %></p>
-<p>
-  <strong><%= t "project.team_id: " %></strong>
-  <%= @project.team_id %>
-</p>
-<p>
-  <strong><%= t "project.name: " %></strong>
-  <%= @project.name %>
-</p>
-<p>
-  <strong><%= t "project.description: " %></strong>
-  <%= @project.description %>
-</p>
-<p>
-  <strong><%= t "project.start_date: " %></strong>
-  <%= @project.start_date %>
-</p>
-<p>
-  <strong><%= t "project.end_date: " %></strong>
-  <%= @project.end_date %>
-</p>
+<aside class= "col-md-6">
+  <p>
+    <strong><%= t "project.team_id: " %></strong>
+    <%= @project.team_id %>
+  </p>
+  <p>
+    <strong><%= t "project.name: " %></strong>
+    <%= @project.name %>
+  </p>
+  <p>
+    <strong><%= t "project.description: " %></strong>
+    <%= @project.description %>
+  </p>
+  <p>
+    <strong><%= t "project.start_date: " %></strong>
+    <%= @project.start_date %>
+  </p>
+  <p>
+    <strong><%= t "project.end_date: " %></strong>
+    <%= @project.end_date %>
+  </p>
 
-<%= link_to t("user.edit"), edit_admin_project_path(@project) %> |
-<%= link_to t("user.back"), admin_projects_path %>
+  <%= link_to t("user.edit"), edit_admin_project_path(@project) %> |
+  <%= link_to t("user.back"), admin_projects_path %>
+</aside>
+<aside class= "col-md-6">
+  <h1><%= t "project.list_user" %></h1>
+  <table>
+    <thead class="t-header">
+      <tr>
+        <th class="th1"><%= t "user.id" %></th>
+        <th class="th2"><%= t "user.email" %></th>
+        <th colspan="3" class="th-colspan"></th>
+      </tr>
+    </thead>
+    <tbody class="t-body">
+      <%= render partial: "user", collection: @users %>
+    </tbody>
+  </table>
+</aside>

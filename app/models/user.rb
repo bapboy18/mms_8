@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
   has_many :position_users, dependent: :destroy
   has_many :teams, through: :team_users
   has_many :team_users, dependent: :destroy
+  has_many :projects, through: :project_users
+  has_many :project_users, dependent: :destroy
 
   query = "id not in (select user_id from team_users)"
   scope :not_in_team, ->{where query}
