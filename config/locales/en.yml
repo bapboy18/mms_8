@@ -163,3 +163,6 @@ devise:
     view: "view"
     remove: "Remove"
     removed: "User was removed"
+  import:
+    team: "Import Teams"
+    team_imported: "Team imported"
