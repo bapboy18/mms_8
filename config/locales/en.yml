@@ -166,3 +166,5 @@ devise:
   import:
     team: "Import Teams"
     team_imported: "Team imported"
+    skill: "Import Skill"
+    skill_imported: "Skill Imported"

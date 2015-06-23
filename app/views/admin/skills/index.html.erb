@@ -14,4 +14,10 @@
     <%= will_paginate %>
   </tbody>
 </table>
+<h2><%= t "import.skill" %></h2>
+<%= form_tag admin_skill_imports_path, method: :post, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>
+
 <%= link_to t("skill.new_skill"), new_admin_skill_path %>

@@ -10,4 +10,12 @@ class Skill < ActiveRecord::Base
   after_create :log_create
   after_update :log_update
   after_destroy :log_destroy
+
+  def self.import file
+    CSV.foreach(file.path, headers: true) do |row|
+      skill = find_by_id(row["id"]) || new
+      skill.attributes = row.to_hash.slice *row.to_hash.keys
+      skill.save!
+    end
+  end
 end
