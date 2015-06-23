@@ -1,5 +1,6 @@
 class Admin::TeamsController < ApplicationController
-  before_action :set_team, only: [:show, :edit, :update, :destroy]
+  before_action :set_team, except: [:index, :new, :create]
+  before_action :authenticate_user!, :admin_user
 
   def index
     @teams = Team.all.paginate page: params[:page],

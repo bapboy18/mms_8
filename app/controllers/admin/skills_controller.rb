@@ -1,5 +1,6 @@
 class Admin::SkillsController < ApplicationController
-  before_action :set_skill, only: [:show, :edit, :update, :destroy]
+  before_action :set_skill, except: [:index, :new, :create]
+  before_action :authenticate_user!, :admin_user
 
   def index
     @skills = Skill.all.paginate page: params[:page],
