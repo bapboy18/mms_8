@@ -15,5 +15,10 @@
   </table>
   <%= will_paginate %>
 </div>
+<h2><%= t "import.team" %></h2>
+<%= form_tag import_admin_teams_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>
 
 <%= link_to t("team.new_team"), new_admin_team_path %>

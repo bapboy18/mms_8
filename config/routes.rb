@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     resources :teams do
       resource :team_users, only: :show
       get "members" => "team_users#show"
+      collection {post :import}
     end
     resources :skills
     resources :projects

@@ -53,6 +53,13 @@ class Admin::TeamsController < ApplicationController
     end
   end
 
+  def import
+    Team.import params[:file]
+    respond_to do |format|
+      format.html {redirect_to admin_teams_url, notice: t("team.team_imported")}
+    end
+  end
+
   private
   def set_team
     @team = Team.find params[:id]
