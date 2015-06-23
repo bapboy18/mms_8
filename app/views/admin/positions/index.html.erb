@@ -14,4 +14,6 @@
     <%= will_paginate %>
   </tbody>
 </table>
+<%= render "shared/import", _model: Position %>
+
 <%= link_to t("position.new_position"), new_admin_position_path %>

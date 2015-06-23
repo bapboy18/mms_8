@@ -166,5 +166,5 @@ devise:
     remove: "Remove"
     removed: "User was removed"
   import:
-    team: "Import Teams"
-    team_imported: "Team imported"
+    title: "Import"
+    success: "Imported"

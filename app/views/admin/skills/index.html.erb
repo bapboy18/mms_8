@@ -14,4 +14,6 @@
     <%= will_paginate %>
   </tbody>
 </table>
+<%= render "shared/import", _model: Skill %>
+
 <%= link_to t("skill.new_skill"), new_admin_skill_path %>

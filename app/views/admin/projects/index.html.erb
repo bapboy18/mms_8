@@ -11,10 +11,11 @@
       </tr>
     </thead>
     <tbody class="t-body">
-      <%= render partial: "project", collection: @projects %>    
+      <%= render partial: "project", collection: @projects %>
     </tbody>
-  </table>  
+  </table>
   <%= will_paginate %>
 </div>
+<%= render "shared/import", _model: Project %>
 
 <%= link_to t("project.new_project"), new_admin_project_path %>
