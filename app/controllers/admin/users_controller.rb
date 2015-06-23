@@ -3,7 +3,8 @@ class Admin::UsersController < ApplicationController
 
   def index
     @search = User.search params[:q]
-    @users = @search.result
+    @users = @search.result.paginate page: params[:page],
+      per_page: Settings.paginate.small
     @activities = Activity.all
   end
 

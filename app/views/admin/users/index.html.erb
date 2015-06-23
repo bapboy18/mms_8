@@ -1,18 +1,32 @@
 <h1><%= t "user.all_user" %></h1>
 
-<div class = "export-csv">
-  <%= render "export_csv" %>
+<div id = "search">
+  <div class = "search-box">
+    <%= render "search" %>
+  </div>
+
+  <div class = "search-result">
+    <%= render "result" %>
+  </div>
 </div>
 
-<div class = "search-box">
-  <%= render "search" %>
+<div id = "activity-and-export">
+  <div class = "activity-log">
+    <h3><%= t "activity.list" %></h3>
+    <marquee bgcolor="#C0C0C0" onMouseOver="this.scrollAmount=0"
+      onMouseOut="this.scrollAmount=2" scrollamount="2" direction="up"
+      loop="true" width="80%">
+      <center>
+      <%= render "activity" %>
+      </center>
+    </marquee>
+  </div>
+
+  <div class = "export-csv">
+    <%= render "export_csv" %>
+  </div>
 </div>
 
-<div id = "search-result">
-  <%= render "result" %>
-</div>
+<div>
 
-<div id = "activity-log">
-  <h3><%= t "activity.list" %></h3>
-  <%= render "activity" %>
 </div>
