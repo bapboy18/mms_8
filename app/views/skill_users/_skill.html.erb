@@ -1,5 +1,18 @@
-<ul><%= t "skill.user" %>
-  <% @user.skills.each do |skill| %>
-    <li><%= skill.name %></li>
-  <% end %>
-</ul>
+<%= form_for @user do |f| %>
+  <table class="table">
+    <tr>
+      <th><%= t "skill.name" %><th>
+    </tr>
+    <%= f.fields_for :skill_users do |b| %>
+      <tr>
+        <td><%= b.check_box :_destroy,
+        {checked: @user.skills.include?(b.object.skill)}, Settings.zero, Settings.one %></td>
+        <td><%= b.object.skill.try(:name) %></td>
+        <td><%= b.select :level, Settings.level %></td>
+        <td><%= b.text_field :year %></td>
+        <%= b.hidden_field :skill_id %>
+      </tr>
+    <% end %>
+  </table>
+  <%= f.submit t("skill.submit"), class: "btn btn-primary" %>
+<% end %>

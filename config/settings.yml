@@ -9,3 +9,11 @@ activities:
   create: "admin_create"
   update: "admin_update"
   destroy: "admin_destroy"
+zero: 0
+one: 1
+admin: admin
+level:
+  beginner: "beginner"
+  low: "low level"
+  hight: "hight level"
+  super_pro: "super pro"
