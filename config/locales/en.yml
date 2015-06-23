@@ -47,6 +47,8 @@ en:
     position: "Positions:"
     skill: "Skills:"
     not_admin: "You are not admin,login please!"
+    search: "Search"
+    update: "Update"
   layouts:
     welcome: "Welcome to Member Manager System  MMS_8"
     tridu: "From tridu team!"
