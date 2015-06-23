@@ -1,5 +1,6 @@
 class Admin::ProjectsController < ApplicationController
-  before_action :set_project, only: [:show, :edit, :update, :destroy]
+  before_action :set_project, except: [:index, :new, :create]
+  before_action :authenticate_user!, :admin_user
 
   def index
     @projects = Project.all.paginate page: params[:page],
