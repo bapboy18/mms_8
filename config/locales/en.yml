@@ -136,6 +136,9 @@ en:
     end_date: "End date"
     submit: "Submit"
     joined_date: "Joined Date:"
+  import:
+    title: "Import file CSV"
+    success: "Imported"
 devise:
   sessions:
     user:
@@ -165,6 +168,3 @@ devise:
     view: "view"
     remove: "Remove"
     removed: "User was removed"
-  import:
-    title: "Import"
-    success: "Imported"

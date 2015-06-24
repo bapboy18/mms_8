@@ -240,43 +240,11 @@ input {
   }
 }
 
-/* microposts */
-
-.microposts {
-  list-style: none;
-  padding: 0;
-  li {
-    padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
-  }
-  .user {
-    margin-top: 5em;
-    padding-top: 0;
-  }
-  .content {
-    display: block;
-    margin-left: 60px;
-    img {
-      display: block;
-      padding: 5px 0;
-    }
-  }
-  .timestamp {
-    color: $gray-light;
-    display: block;
-    margin-left: 60px;
-  }
-}
-
 aside {
   textarea {
     height: 100px;
     margin-bottom: 5px;
   }
-}
-
-.t-header {
-  background-color: red
 }
 
 .list-user {
@@ -341,3 +309,42 @@ aside {
   float: right;
 }
 
+/* table */
+
+table {
+  border: 2px solid red;
+  margin: 10px;
+}
+
+td {
+  border: 1px solid red;
+  padding: 7px 15px 7px 15px;
+}
+
+.t-header {
+  background-color: #E0E0E0;
+  border: 1px solid red
+}
+
+th {
+  border: 1px solid red;
+  padding: 7px 15px 7px 15px;
+}
+
+.t-body {
+  border:1px solid red
+}
+
+/* Import */
+
+.import {
+  width: 300px;
+  float: right;
+  border: 1px solid red;
+}
+
+.show-box {
+  width: 800px;
+  float: left;
+  background-color: #F0F0F0;
+}

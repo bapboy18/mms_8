@@ -1,6 +1,8 @@
-<h2><%= t "import.title" %></h2>
-<%= form_tag admin_imports_path, method: :post, multipart: true do %>
-  <%= file_field_tag :file %>
-  <%= hidden_field_tag :model, _model %>
-  <%= submit_tag "Import" %>
-<% end %>
+<div class = "import">
+  <h2><%= t "import.title" %></h2>
+  <%= form_tag admin_imports_path, method: :post, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= hidden_field_tag :model, _model %>
+    <div class = "import-button"><%= submit_tag "Import", class: "btn btn-primary" %>
+  <% end %>
+</div>
