@@ -1,19 +1,21 @@
 <p id="notice"><%= notice %></p>
 <h1><%= t "position.listing_position" %></h1>
-<table>
-  <thead class="t-header">
-    <tr>
-      <th class="th1"><%= t "position.name" %></th>
-      <th class="th2"><%= t "position.abbreviation" %></th>
-      <th colspan="3" class="th-colspan"></th>
-    </tr>
-  </thead>
+<div class = "show-box">
+  <table>
+    <thead class="t-header">
+      <tr>
+        <th><%= t "position.name" %></th>
+        <th><%= t "position.abbreviation" %></th>
+        <th colspan="3" class="th-colspan"></th>
+      </tr>
+    </thead>
 
-  <tbody class="t-body">
-    <%= render partial: "position", collection: @positions %>
-    <%= will_paginate %>
-  </tbody>
-</table>
+    <tbody class="t-body">
+      <%= render partial: "position", collection: @positions %>
+      <%= will_paginate %>
+    </tbody>
+  </table>
+  <%= link_to t("position.new_position"), new_admin_position_path %>
+</div>
+
 <%= render "shared/import", _model: Position %>
-
-<%= link_to t("position.new_position"), new_admin_position_path %>

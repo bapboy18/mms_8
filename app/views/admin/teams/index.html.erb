@@ -1,20 +1,22 @@
 <h1><%= t "team.listing_team" %></h1>
-<div id="teams-list">
-  <table>
-    <thead class="t-header">
-      <tr>
-        <th class="th1"><%= t "team.name" %></th>
-        <th class="th2"><%= t "team.description" %></th>
-        <th class="th3"><%= t "team.leader" %></th>
-        <th colspan="3" class="th-colspan"></th>
-      </tr>
-    </thead>
-    <tbody class="t-body">
-      <%= render partial: "team", collection: @teams %>
-    </tbody>
-  </table>
-  <%= will_paginate %>
+<div class = "show-box">
+  <div id="teams-list">
+    <table>
+      <thead class="t-header">
+        <tr>
+          <th><%= t "team.name" %></th>
+          <th><%= t "team.description" %></th>
+          <th><%= t "team.leader" %></th>
+          <th colspan="3" class="th-colspan"></th>
+        </tr>
+      </thead>
+      <tbody class="t-body">
+        <%= render partial: "team", collection: @teams %>
+      </tbody>
+    </table>
+    <%= will_paginate %>
+  </div>
+  <%= link_to t("team.new_team"), new_admin_team_path %>
 </div>
-<%= render "shared/import", _model: Team %>
 
-<%= link_to t("team.new_team"), new_admin_team_path %>
+<%= render "shared/import", _model: Position %>
