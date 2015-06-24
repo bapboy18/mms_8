@@ -15,7 +15,7 @@ Rails.application.routes.draw do
       resource :team_users, only: :show
       get "members" => "team_users#show"
     end
-    resources :team_imports
+    resources :imports
     resources :skills
     resources :projects
     resources :positions
