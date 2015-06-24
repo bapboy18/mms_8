@@ -147,6 +147,7 @@ devise:
     delete: "Team was successfully destroyed."
     new_team: "Create New Team"
     all_team: "All Team"
+    this_team: "Team"
     editing_team: "Editing Team"
     listing_team: "Listing Teams"
     name: "Name"

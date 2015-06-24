@@ -1,4 +1,6 @@
 class TeamsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @teams = Team.all.paginate page: params[:page],
       per_page: Settings.paginate.normal

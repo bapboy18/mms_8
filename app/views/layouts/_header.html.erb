@@ -14,7 +14,6 @@
           <li><%= link_to t("layouts.edit_profile"), edit_user_registration_path %></li>
           <li><%= link_to t("layouts.logout"), destroy_user_session_path, method: :delete %></li>
         <% else %>
-          <li><%= link_to t("team.all_team"), teams_path %></li>
           <li><%= link_to t("layouts.signup"), new_user_registration_path %></li> |
           <li><%= link_to t("layouts.login"), new_user_session_path %></li>
         <% end %>
