@@ -49,6 +49,7 @@ en:
     not_admin: "You are not admin,login please!"
     search: "Search"
     update: "Update"
+    result: "User Search result"
   layouts:
     welcome: "Welcome to Member Manager System  MMS_8"
     tridu: "From tridu team!"
