@@ -135,6 +135,7 @@ en:
     start_date: "Start Date"
     end_date: "End date"
     submit: "Submit"
+    joined_date: "Joined Date:"
 devise:
   sessions:
     user:

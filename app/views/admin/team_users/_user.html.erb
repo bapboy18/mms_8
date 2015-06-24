@@ -1,0 +1,6 @@
+<h3><%= t "team.list_member_assigned"%></h3>
+<% @this_team_users.each do |u| %>
+  <%= u.email %>
+  <p><%= t "team.joined_date" %> <%= u.created_at %></p>
+  <br>
+<% end %>

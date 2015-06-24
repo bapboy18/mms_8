@@ -1,3 +1,4 @@
+<h3><%= t "user.all_user" %></h3>
 <%= form_for [:admin, @team] do |f| %>
   <div class="row">
     <div class="col-md-4 col-md-offset-4">
@@ -21,7 +22,7 @@
             </tr>
           <% end %>
       </table>
-      <%= f.submit t("layouts.update"), class: "btn btn-primary" %>
+      <%= f.submit t("team.add_member"), class: "btn btn-primary" %>
     </div>
   </div>
 <% end %>

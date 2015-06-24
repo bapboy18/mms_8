@@ -39,7 +39,8 @@ class Admin::TeamsController < ApplicationController
   def update
     respond_to do |format|
       if @team.update team_params
-        format.html {redirect_to [:admin, @team], notice: t("team.update")}
+        format.html {redirect_to admin_team_team_users_path(@team), notice: t("team.update")}
+        format.js
       else
         format.html {render :edit}
       end
