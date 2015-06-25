@@ -14,4 +14,10 @@ class Team < ActiveRecord::Base
   after_create :log_create
   after_update :log_update
   after_destroy :log_destroy
+  after_update :send_mail
+
+  private
+  def send_mail
+    users.each{|user| UserMailer.delay.update_team_email user}
+  end
 end

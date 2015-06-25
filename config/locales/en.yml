@@ -169,3 +169,10 @@ devise:
     view: "view"
     remove: "Remove"
     removed: "User was removed"
+  mail:
+    subject: "Welcome to Management Site"
+    welcome: "Welcome to our system! "
+    singed: "You have successfully signed"
+    name: "Your name is: "
+    to_login: "Login to the site"
+    thanks: "Thanks for joining and have a great day!"

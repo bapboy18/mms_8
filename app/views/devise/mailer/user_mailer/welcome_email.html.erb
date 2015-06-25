@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1><%= t "mail.welcome" %><%= @user.name %></h1>
+    <p>
+      <%= t "mail.signed" %>
+      <%= t "mail.name" %><%= @user.login %>.<br/>
+    </p>
+    <p>
+      <%= t "mail.to_login" %><%= root_path %>.
+    </p>
+    <p><%= t "mail.thanks" %></p>
+  </body>
+</html>
