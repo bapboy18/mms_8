@@ -7,4 +7,5 @@
     <li><%= skill.name %></li>
   <% end %>
 </div>
+<%= link_to t("team.all_team"), teams_path %><br/>
 <%= link_to t("skill.add"), user_skills_path(@user), class:"btn btn-success btn-sm" %>
