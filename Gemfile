@@ -23,6 +23,7 @@ gem "sinatra", require: false
 gem "slim"
 gem "redis-rails"
 gem "bootstrap-datepicker-rails"
+gem "whenever", require: false
 
 group :development, :test do
   gem "rspec-rails"
